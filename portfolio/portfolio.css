@@ -1,0 +1,126 @@
+body{
+    overflow: scroll;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0deg, darkgray 50%, transparent);
+}
+#portfolioContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+
+.card{
+    position: relative;
+    /* float: left; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    width: 300px;
+    height: 450px;
+    background: #000000;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    margin: 20px;
+    opacity: 0;
+    transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transition: transform 1.5s, opacity 2s;
+    -webkit-transition: transform 1.5s, opacity 2s;
+    -moz-transition: transform 1.5s, opacity 2s;
+    -o-transition: transform 1.5s, opacity 2s;
+}
+
+.card .poster{
+    position: relative;
+    overflow: hidden;
+}
+
+.card .poster:before{
+    content: '';
+    position: absolute;
+    bottom: -250px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000000 50%, transparent);
+    transition: 1s;
+    z-index: 1;
+}
+
+.card:hover .poster:before{
+    bottom: 0;
+}
+
+.card .poster img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    transition: 1s;
+}
+
+.card:hover .poster img{
+    filter: blur(5px);
+    transform: translateY(-50px);
+}
+
+
+/* SPRAWDZIĆ CSS DLA WSZYSTKICH PRZEGLĄDAREK */
+.details{
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    height: 80%;
+    bottom: -250px;
+    left: 0;
+    box-sizing: border-box;
+    transition: 1s;
+    z-index: 2;
+}
+
+.card:hover .details{
+    bottom: 0;
+}
+
+.details h2{
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.details h2 span{
+    font-size: 14px;
+    color: #ff9800;
+
+}
+
+.tags{
+    position: relative;
+    margin-top: 5px;
+}
+
+.tags span{
+    padding: 2px 5px;
+    margin-right: 2px;
+    background: darkgray;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.info{
+    color: #ffffff;
+
+}
+
+.info p{
+    margin: 15px 0 10px;
+}

@@ -1,0 +1,403 @@
+/* -webkit-transform: translate(-50%, -50%);  WebKit */
+/* -moz-transform: translate(-50%, -50%);  Mozilla */
+/* -o-transform: translate(-50%, -50%);  Opera */
+/* -ms-transform: translate(-50%, -50%);  Internet Explorer */
+
+html {
+    background: white;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mainContainer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, white, grey);
+    opacity: 0;
+    transition: opacity 3s;
+    -webkit-transition: opacity 3s;
+    -moz-transition: opacity 3s;
+    -o-transition: opacity 3s;
+}
+
+#logo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    background: url(DGSoftLogoLifting.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    opacity: 0;
+    transition: opacity 4s, top 1s, left 2s, transform 1s;
+    -webkit-transition: opacity 4s, top 1s, left 2s, transform 1s;
+    -moz-transition: opacity 4s, top 1s, left 2s, transform 1s;
+    -o-transition: opacity 4s, top 1s, left 2s, transform 1s;
+    /* transition-property: top, left;
+    -webkit-transition-property: top, left;
+    -moz-transition-property: top, left;
+    -o-transition-property: top, left;
+    
+    transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -o-transition-duration: 2s; */
+    /* -webkit-transition-duration: 0.5s; */
+}
+
+#textSection {
+    position: absolute;
+    top: 40%;
+    text-align: center;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    /* WebKit */
+    -moz-transform: translate(-50%, -50%);
+    /* Mozilla */
+    -o-transform: translate(-50%, -50%);
+    /* Opera */
+    -ms-transform: translate(-50%, -50%);
+    /* Internet Explorer */
+    transform: translate(-50%, -50%);
+    /* CSS3 */
+    z-index: 300;
+    opacity: 0;
+    transition: opacity 3s, top 2s;
+    -webkit-transition: opacity 3s, top 2s;
+    -moz-transition: opacity 3s, top 2s;
+    -o-transition: opacity 3s, top 2s;
+}
+
+#myName {
+    display: block;
+    color: black;
+    display: block;
+    font-size: 4em;
+    font-weight: 300;
+}
+
+#textAboutMe {
+    display: block;
+    font-size: 3em;
+    font-weight: 300;
+}
+
+#tam_cursor_blinking {
+    -webkit-animation: 500ms blink step-end infinite;
+    -moz-animation: 500ms blink step-end infinite;
+    -ms-animation: 500ms blink step-end infinite;
+    -o-animation: 500ms blink step-end infinite;
+    animation: 500ms blink step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-moz-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-webkit-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-ms-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+@-o-keyframes blink {
+
+    from,
+    to {
+        color: transparent;
+    }
+
+    50% {
+        color: black;
+    }
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* MENU */
+
+.menu {
+    position: absolute;
+    /* bottom: 20px; */
+    bottom: 0;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    -webkit-transform: translate(-50%, 130%);
+    -moz-transform: translate(-50%, 130%);
+    -o-transform: translate(-50%, 130%);
+    -ms-transform: translate(-50%, 130%);
+    z-index: 400;
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 40px;
+    transform: rotate(-30deg) skew(25deg);
+    /* background: #cccccc; */
+    border-radius: 10px;
+    float: left;
+}
+
+ul li span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    /* left: 0; */
+    text-align: center;
+    transition: transform 500ms, color 1s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.menuIcon {
+    font-size: 30px !important;
+}
+
+.menuText {
+    font-size: 15px !important;
+}
+
+ul li span:nth-child(5) {
+    opacity: 1;
+}
+
+ul li:hover span:nth-child(5) {
+    transform: translate(40px, -40px);
+}
+
+ul li span:nth-child(4) {
+    opacity: 0.8;
+}
+
+ul li:hover span:nth-child(4) {
+    transform: translate(30px, -30px);
+}
+
+ul li span:nth-child(3) {
+    opacity: 0.6;
+}
+
+ul li:hover span:nth-child(3) {
+    transform: translate(20px, -20px);
+}
+
+ul li span:nth-child(2) {
+    opacity: 0.4;
+}
+
+ul li:hover span:nth-child(2) {
+    transform: translate(10px, -10px);
+}
+
+ul li span:nth-child(1) {
+    opacity: 0.2;
+}
+
+ul li:hover span:nth-child(1) {
+    transform: translate(0, 0);
+}
+
+ul li:nth-child(1) span {
+    background-color: #696969;
+}
+
+ul li:nth-child(2) span {
+    background-color: #808080;
+    /* background-color: #696969; */
+}
+
+ul li:nth-child(3) span {
+    background-color: #A9A9A9;
+    /* background-color: #696969; */
+}
+
+ul li:nth-child(4) span {
+    background-color: #C0C0C0;
+    /* background-color: #696969; */
+}
+
+ul li:nth-child(5) span {
+    background-color: #D3D3D3;
+    /* background-color: #696969; */
+}
+
+ul li:nth-child(6) span {
+    background-color: #D3D3D3;
+    /* background-color: #696969; */
+}
+
+ul li:nth-child(7) span {
+    background-color: #D3D3D3;
+    /* background-color: #696969; */
+}
+
+ul li:hover span {
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+
+
+#photo {
+    position: absolute;
+    right: 20%;
+    
+    content: url(photo.png);
+    opacity: 0;
+    /* 0.2 */
+    height: 100%;
+    width: auto;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+    z-index: 100;
+    transition: opacity 2s, right 2s;
+    -webkit-transition: opacity 2s, right 2s;
+    -moz-transition: opacity 2s, right 2s;
+    -o-transition: opacity 2s, right 2s;
+}
+
+/* DO USUNIĘCIA */
+#listExtension {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px 20px 0 0;
+    bottom: 0;
+    left: 0;
+
+
+    /* border-bottom: 40px solid white; */
+    /* border-left: 40px solid transparent; */
+    /* border-right: 40px solid transparent; */
+    /* height: 0; */
+    /* width: 120px; */
+    color: black;
+    text-align: center;
+    /* vertical-align: middle; */
+    line-height: 30px;
+}
+
+
+@media (max-width: 991px){
+    #photo{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: none;
+        background: url(photo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #menu{
+        flex-wrap: wrap;
+        bottom: 0;
+    }
+
+    #menu li{
+        margin-bottom: 10px;
+    }
+
+    #textSection{
+        width: 100%;
+        left: 0;
+        -webkit-transform: translate(0, 0);
+        /* WebKit */
+        -moz-transform: translate(0, 0);
+        /* Mozilla */
+        -o-transform: translate(0, 0);
+        /* Opera */
+        -ms-transform: translate(0, 0);
+        /* Internet Explorer */
+        transform: translate(0, 0);
+    }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Daniel Goławski</title>
+    <meta name="description" content="Daniel Goławski" />
+    <meta name="keywords" content="Daniel Goławski - strona główna" />
+    <meta name="author" content="Daniel Golawski" />
+    <!-- <link rel="shortcut icon" href="imagesVideos/logorounded.ico"> -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <link rel="stylesheet" type="text/css" href="../index/index.css" />
+    <script src="portfolioElement.js"></script>
+    <script src="portfolio.js"></script>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+</head>
+
+<body>
+    <div id="portfolioContainer">
+        <!-- <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="poster"><img
+                    src="https://www.autocentrum.pl/ac-file/car-version/59999b1b582c7d7f068b4579/mercedes-klasa-s-w222-limuzyna-wersja-dluga-facelifting.jpg">
+            </div>
+            <div class="details">
+                <h2>Mercedes S W222<br>
+                    <span>www.mercedes.com</span>
+                </h2>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Python</span>
+                </div>
+                <div class="info">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum ipsa adipisci officia
+                        perferendis esse quis dicta in vel aut dolore, quas voluptatibus hic sunt quibusdam, quasi atque
+                        fugit minima nesciunt?</p>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</body>
